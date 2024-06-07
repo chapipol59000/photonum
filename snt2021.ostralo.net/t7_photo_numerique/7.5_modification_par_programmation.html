@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr">
+
+
+<!-- Mirrored from snt2021.ostralo.net/t7_photo_numerique/7.5_modification_par_programmation.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 Apr 2022 13:44:51 GMT -->
+<head>
+    <meta charset="utf-8">
+    <title>SNT</title>
+    <script async src="../../plugins.ostralo.net/mathjax/load_mathjax.js"></script>
+    <link href="../../plugins.ostralo.net/prism/prism.css" rel="stylesheet" />
+    <script defer src="../../plugins.ostralo.net/prism/prism.js"></script>
+
+    <link href="../commun/styles_structure.css" rel="stylesheet" type="text/css">
+    <link href="../commun/styles_activite_commun.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <header>
+        <h1><a href="http://snt2021.ostralo.net/index.htm"><span>Sciences</span> <span>Numériques</span> et <span>Technologiques</span></a></h1>
+        <h2><a href="index.html">Thème 7 : La photographie numérique</a></h2>
+    </header>
+
+    <main>
+
+        <h1>7.5 : Modification d'une photographie par programmation</h1>
+
+        <section>
+            <h2>I - Présentation (s'informer)</h2>
+            <div class="icone documents">
+                <p>Il est possible, à l'aide d'un logiciel adapté (comme  <a href="http://www.photopea.com/">www.photopea.com</a> que nous avons utilisé dans l'activité précédente), de modifier une image.</p>
+                <p>Pour certaines de ces modifications, en particulier celles qui modifient les couleurs, le logiciel utilise des algorithmes adaptés.</p>
+                <p>Dans cette activité, nous n'allons pas utiliser un logiciel de dessin, mais programmer directement quelques algorithme de modification des couleurs d'une image.</p>
+            </div>
+
+
+        </section>
+
+        <section>
+            <h2>II - Code python de base pour modifier une photo</h2>
+            <p>Le langage de programmation python permet de modifier les fichiers de photographies numériques.</p>
+            <blockquote>
+                <pre class="line-numbers"><code class="language-python">from PIL import Image
+
+# Chargement de l'image
+imagePython = Image.open("ballon.png")
+
+# Récupération de la largeur et de la hauteur (en pixels) de l'image
+largeur = imagePython.width
+hauteur = imagePython.height
+
+# Parcours de tous les pixels
+for x in range(0,largeur):
+    for y in range(0,hauteur):
+        # récupération de la couleur du pixel de coordonnées (x,y)
+        couleur = imagePython.getpixel((x, y))
+        # récupération des composantes rouge, verte et bleue
+        rouge = couleur[0]
+        vert = couleur[1]
+        bleu = couleur[2]
+        # modification des valeurs des composantes
+        nouveau_rouge = 0
+        nouveau_vert = 0
+        nouveau_bleu = bleu
+        # reconstitution de la couleur
+        nouvelle_couleur = (nouveau_rouge, nouveau_vert, nouveau_bleu)
+        # réattribution de la nouvelle couleur au pixel de coordonnées (x,y)
+        imagePython.putpixel((x, y), nouvelle_couleur)
+
+# Sauvegarde de l'image dans un nouveau fichier
+imagePython.save('ballon_bleu.png','png')
+
+# Ouverture de l'image pour la visualiser
+imagePython.show()</code></pre>
+            </blockquote>
+
+            <p>Le schéma ci-dessous précise la façon dont sont déterminées les coordonnées \((x, y)\) des pixels.</p>
+            <figure>
+                <img src="images/PIL_coordonnees.png">
+            </figure>
+
+            <h4>A faire</h4>
+            <div class="icone ordinateur">
+                <p>• Télécharger l'image ci-dessous dans votre espace, sans modifier son nom.</p>
+                <figure>
+                    <img src="images/ballon.png">
+                </figure>
+                <p>• Ouvrir le logiciel Thonny et copier-coller le code ci-dessus. Enregistrer le fichier dans le même dossier que l'image.</p>
+                <p>• Lancer l'exécution du programme.</p>
+                <p>• Vérifier que l'image "ballon_bleu.png" a bien été enregistrée dans le même dossier que l'image d'origine et que le programme.</p>
+            </div>
+            <div class="icone stylo">
+                <p>Retrouver les lignes du programme qui permettent d'expliquer le résultat obtenu.</p>
+            </div>
+            <p> </p>
+            <div class="icone ordinateur">
+                <p>Modifier le programme pour qu'il crée un nouvelle version de l'image en ne gardant que la composante rouge des pixels. Le fichier obtenu devra être enregistré par le programme avec le nom "ballon_rouge.png"</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>III - Mise en pratique</h2>
+
+            <h3>1) Version négative de l'image</h3>
+            <p>On souhaite obtenir l'image négative du ballon.</p>
+            <figure>
+                <img src="images/python_modif_negatif.png">
+            </figure>
+            <div class="icone documents">
+                <p>L'image négative s'obtient en "inversant", pour chaque pixel, l'intensité du rouge, du vert et du bleu.</p>
+                <p>Autrement dit :</p>
+                <ul>
+                    <li>- si l'intensité est \(0\) elle devient \(255\) ;</li>
+                    <li>- si l'intensité est \(255\) elle deviennent \(0\) ;</li>
+                    <li>- plus globalement, une intensité \(i\) devient \(255 - i\).</li>
+                </ul>
+            </div>
+            <h4>A faire</h4>
+            <div class="icone ordinateur">
+                <p>Modifier le code du programme initial pour obtenir le résultat ci-dessus. Le fichier obtenu devra être enregistré par le programme avec le nom "ballon_negatif.png".</p>
+            </div>
+
+            <h3>2) Version en nuances de gris de l'image</h3>
+            <p>On souhaite obtenir l'image en nuances de gris du ballon.</p>
+            <figure>
+                <img src="images/python_modif_gris.png">
+            </figure>
+            <div class="icone documents">
+                <p>L'image en nuances de gris s'obtient en procédant de la façon suivante pour chaque pixel :</p>
+                <ul>
+                    <li>- création d'une valeur <code>gris</code> dont la valeur est calculée à partir des intensités des composantes rouge, verte et bleue :</li>
+                    <pre style="margin-left: 1.5em"><code class="language-python">gris = int(0.2989 * rouge + 0.5870 * vert + 0.1140 * bleu)</code></pre>
+                    <li>- affectation de la valeur de la variable <code>gris</code> à chaque nouvelle composante de couleur.</li>
+                </ul>
+            </div>
+            <h4>A faire</h4>
+            <div class="icone ordinateur">
+                <p>Modifier le code du programme initial pour obtenir le résultat ci-dessus. Le fichier obtenu devra être enregistré par le programme avec le nom "ballon_gris.png".</p>
+            </div>
+
+            <h3>3) Modification de la partie gauche de l'image</h3>
+            <p>On souhaite que l'image initiale soit transformée de la façon suivante : </p>
+            <figure>
+                <img src="images/python_modif_2.png">
+            </figure>
+            <h4>A faire</h4>
+            <div class="icone ordinateur">
+                <p>Modifier le code du programme initial pour obtenir le résultat ci-dessus.</p>
+            </div>
+
+        </section>
+        <a href = "../../index.html#ancre_4"><h2>retour</h2></a>
+    </main>
+
+    <footer>
+        <p>www.ostralo.net</p>
+    </footer>
+</body>
+
+
+<!-- Mirrored from snt2021.ostralo.net/t7_photo_numerique/7.5_modification_par_programmation.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 Apr 2022 13:44:55 GMT -->
+</html>

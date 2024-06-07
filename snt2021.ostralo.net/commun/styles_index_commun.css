@@ -1,0 +1,24 @@
+
+main .histoire {
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: 4rem;
+    background-position-y: center;
+    min-height: 4rem;
+    padding: 0 0 0 4.3rem;
+    background-image: url(icone_histoire.png);
+}
+
+main a {
+    color : #000;
+    text-decoration: none;
+    padding: 0.2em;
+    border-radius: 0.4em;
+    text-shadow: 0.04em 0.04em 0.1em #555779;
+}
+
+main a:hover {
+    color: #191B32;
+    background-color: #d8daee;
+}

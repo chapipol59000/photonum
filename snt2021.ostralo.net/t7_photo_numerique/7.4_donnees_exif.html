@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+
+
+<!-- Mirrored from snt2021.ostralo.net/t7_photo_numerique/7.4_donnees_exif.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 Apr 2022 13:44:48 GMT -->
+<head>
+    <meta charset="utf-8">
+    <title>SNT</title>
+    <script async src="../../plugins.ostralo.net/mathjax/load_mathjax.js"></script>
+
+    <link href="../commun/styles_structure.css" rel="stylesheet" type="text/css">
+    <link href="../commun/styles_activite_commun.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <header>
+        <h1><a href="http://snt2021.ostralo.net/index.htm"><span>Sciences</span> <span>Numériques</span> et <span>Technologiques</span></a></h1>
+        <h2><a href="index.html">Thème 7 : La photographie numérique</a></h2>
+    </header>
+
+    <main>
+
+        <h1>7.4 : Données EXIF d'une photographie</h1>
+
+        <section>
+            <h2>I - Présentation (s'informer)</h2>
+            <div class="icone documents">
+                <p>Le fichier numérique d'une photographie ne contient pas uniquement les informations sur les couleurs des pixels.</p>
+                <p>Il peut également contenir le nom de l'appareil qui a servi à prendre la photo, la date de la prise de vue, si un flash a été utilisé... Ces informations s'appelles les <strong>métadonnées</strong>.</p>
+                <p>Pour les fichiers de photographies, les métadonnées sont enregistrées dans un format appelé EXIF (Exchangeable Image File Format).</p>
+            </div>
+
+
+        </section>
+
+        <section>
+            <h2>II - Mise en pratique sur une photographie</h2>
+            <p>Dans toute cette partie, on travaillera avec l'image qui se trouve dans le dossier "Public" de la classe.</p>
+            <h3>1) Récupérer les données EXIF d'une photographie</h3>
+            <h4>Manipuler</h4>
+            <div class="icone ordinateur">
+                <p>🖰 Récupérer l'image qui se trouve dans le dossier "Public" de la classe et l'enregistrer dans votre espace (dans un dossier adapté).</p>
+                <p>🖰 Ouvrir la page : <a target="_blank" href="https://www.dcode.fr/donnees-exif">DCODE : Données EXIF</a></p>
+                <p>🖰 Charger la photographie et extraire les données EXIF</p>
+                <figure>
+                    <img src="images/7.4_dcode_exif_1.png">
+                </figure>
+                <p>➥ Les données s'affiches dans la colonne de gauche.</p>
+                <p>🖰 Enregistrer le fichier contenant les données dans votre espace.</p>
+                <figure>
+                    <img src="images/7.4_dcode_exif_2.png">
+                </figure>
+            </div>
+
+            <h4>Répondre aux questions suivantes : </h4>
+            <div class="icone stylo">
+                <p>1) Avec quel modèle d'appareil la photographie a-t-elle été prise ?</p>
+                <p>2) A quelle date et à quelle heure la photographie a-t-elle été prise ?</p>
+                <p>3) Quelle est la définition de l'image ?</p>
+            </div>
+
+            <h3>2) Les informations de géolocalisation</h3>
+            <h4>S'informer</h4>
+            <div class="icone documents">
+                <p>La position d'un point à la surface de la Terre est données par deux angles : la <strong>longitude</strong> et de la <strong>latitude</strong>.</p>
+                <figure>
+                    <img src="images/7.4_longitude_latitude.png">
+                </figure>
+                <p>Dans un fichier EXIF ces deux angles sont exprimées en \(heures\), \(minutes\), \(seconde\).</p>
+                <p>La valeur décimale s'obtient en faisant l'opération suivante : \(angle_{10} = heures + \dfrac{minutes}{60} + \dfrac{secondes}{3600}\)</p>
+                <p>Exemple :</p>
+                <blockquote>
+                    <p>Si GPSLatitude a pour valeurs : \(35/1\) ; \(22/1\) et \(654/100\)</p>
+                    <p>Alors la latitude en valeur décimale vaut : \(L = \left(\dfrac{35}{1}\right) + \dfrac{\left(\dfrac{22}{1}\right)}{60} + \dfrac{\left(\dfrac{654}{100}\right)}{3600}\)</p>
+                </blockquote>
+            </div>
+            <h4>Manipuler</h4>
+            <div class="icone ordinateur">
+                <p class="gras">Détermination de la latitude et de la longitude</p>
+                <blockquote>
+                    <p>Relever les données EXIF suivantes : GPSLatitude et GPSLongitude.</p>
+                    <p>Calculer les valeurs décimales de la latitude et de la longitude.</p>
+                </blockquote>
+                <p class="gras">Affichage sur une carte</p>
+                <blockquote>
+                    <p>Ouvrir le service de cartographie en ligne <a target="_blank" href="https://www.openstreetmap.org/">openstreetmap</a></p>
+                    <p>Dans la zone de recherche entrer les coordonnées du point recherché sous la forme : Latitude décimale, Longitude décimale.</p>
+                    <figure>
+                        <img src="images/7.4_oppenstreetmap.png">
+                    </figure>
+                </blockquote>
+            </div>
+            <div class="icone stylo">
+                <p>Reporter le résultat des actions précédentes sur votre compte-rendu.</p>
+                <p>Indiquer le lieu où la photo a été prise.</p>
+                <p>Copier-coller une impressions écran de la carte dans votre compte rendu.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>III - Intérêts des données EXIF et précautions à prendre</h2>
+            <h4>Un peu de bon sens...</h4>
+            <div class="icone stylo">
+                <p>1) Présenter une situation pour laquelle il est souhaitable que la photographie n'ait pas de données EXIF (on précisera la ou les données EXIF à supprimer).</p>
+                <p>2) Présenter une situation pour laquelle il est intéressant que la photographie ait des données EXIF (on précisera les données EXIF intéressantes).</p>
+            </div>
+            <h4>Savoir utiliser son téléphone portable</h4>
+            <div class="icone ordinateur">
+                <p>Rechercher sur votre téléphone portable comment mettre ou ne pas mettre les données EXIF (en particulier la géolocalisation) pour les photographies que vous prenez.</p>
+            </div>
+            <div class="icone stylo">
+                <p>Indiquer succinctement la procédure à suivre sur votre compte-rendu.</p>
+            </div>
+        </section>
+        <a href = "../../index.html#ancre_3">retour</a>
+    </main>
+
+    <footer>
+        <p>www.ostralo.net</p>
+    </footer>
+</body>
+
+
+<!-- Mirrored from snt2021.ostralo.net/t7_photo_numerique/7.4_donnees_exif.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 Apr 2022 13:44:51 GMT -->
+</html>

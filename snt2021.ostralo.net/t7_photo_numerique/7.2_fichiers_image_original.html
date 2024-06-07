@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr">
+
+
+<!-- Mirrored from snt2021.ostralo.net/t7_photo_numerique/7.2_fichiers_image.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 Apr 2022 13:44:47 GMT -->
+<head>
+    <meta charset="utf-8">
+    <title>SNT</title>
+    <link href="../commun/styles_structure.css" rel="stylesheet" type="text/css">
+    <link href="../commun/styles_activite_commun.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <header>
+        <h1><a href="http://snt2021.ostralo.net/index.htm"><span>Sciences</span> <span>Numériques</span> et <span>Technologiques</span></a></h1>
+        <h2><a href="index.html">Thème 7 : La photographie numérique</a></h2>
+    </header>
+
+    <main>
+
+        <h1>7.2 : Comment les images sont-elles stockées ?</h1>
+
+        <section>
+            <h2>I - Recherche d'une solution</h2>
+
+            <h4>Questions</h4>
+            <div class="icone stylo">
+                <p>Proposer, en expliquant votre idée, une façon de stocker numériquement chacune des images ci-dessous.</p>
+                <div style="display: flex; justify-content: center;">
+                    <figure>
+                        <img src="images/image1.png">
+                        <figcaption>Image 1</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/image2.png">
+                        <figcaption>Image 2</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/image3.png">
+                        <figcaption>Image 3</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>II - Le format d'image RAW</h2>
+            <h3>1) Présentation</h3>
+            <h4>S'informer</h4>
+            <div class="icone documents">
+                <p>Il existe de nombreuses façons de stocker une image : on parle de formats d'images.</p>
+                <p>Un format d'image est en général identifié par l'extension du fichier.</p>
+                <p>Exemples : .jpg .png .bmp .tiff</p>
+                <p> </p>
+                <p>Un appareil photo mémorise les photos prises au format RAW (puis, le plus souvent, en fait une copie dans un autre format pour l'utilisateur).</p>
+                <p>Le format RAW n'est pas standardisé. Il existe de petites variantes en fonction du fabriquant de l'appareil photographie utilisé.</p>
+                <p> </p>
+                <p>Dans cette activité, nous nous intéressons au principe général du format RAW.</p>
+                <p><strong>Le format RAW est un format dans lequel chaque pixel est mémorisé par sa couleur</strong>.</p>
+                <p> </p>
+                <p>Lien pour aller plus loin : <a target="_blank" href="https://fr.wikipedia.org/wiki/RAW_(format_d'image)">WikipédiA : RAW (format d'image)</a></p>
+            </div>
+
+            <h3>2) Le format RAW à 1 canal de 8 bits</h3>
+            <h4>S'informer</h4>
+            <div class="icone documents">
+                <p>Dans le format RAW à 1 canal de 8 bits, chaque pixel est codé sur 1 octet (8 bits), soit 256 valeurs possibles.</p>
+                <p>Ce format est en général utilisé pour les photographies en nuances de gris (photo dites en noir et blanc).</p>
+            </div>
+            <h4>Questions (pour bien comprendre)</h4>
+            <div class="icone stylo">
+                <p>L'image ci-dessous et le code au format RAW qui suit correspondent.</p>
+                <p>• Image :</p>
+                <figure>
+                    <img src="images/degrade_1c_8b.png">
+                </figure>
+                <p>• Code hexadécimal (format RAW) :</p>
+                <p><span style="font-family: monospace;">FFCC99663300FFCC99663300FFCC99663300FFCC99663300FFCC99663300FFCC99663300</span></p>
+                <p>1) Justifier que le nombre de pixels de l'image correspond au nombre d'octets du code.</p>
+                <p>2) On s'intéresse à la première ligne de l'image.</p>
+                <ul>
+                    <li>a. Identifier, en justifiant, la partie du code qui correspond à la première ligne.</li>
+                    <li>b. Expliquer ce code.</li>
+                </ul>
+            </div>
+
+            <h4>Manipuler : créer une image à partir de son code</h4>
+            <div class="icone ordinateur">
+                <p>1) Sur votre cahier, inventer une image de 8×8 pixels ne contenant que des pixels blancs et des pixels noirs.</p>
+                <p>2) Proposer le code correspondant à cette image.</p>
+                <p>3) Création du fichier au format RAW :</p>
+                <ul>
+                    <li>- Ouvrir la page : <a href="https://hexed.it/" target="_blank">hexed.it</a>.</li>
+                    <li>- Ouvrir un nouveau fichier (<span class="btn">Nouveau fichier</span>), en choisissant la taille adaptée.</li>
+                    <li>- Entrer votre code.</li>
+                    <li>- Enregistrer votre code dans un fichier dont l'extension est .RAW (<span class="btn">Enregistrer sous</span>).</li>
+                </ul>
+                <p>4) Vérifier votre code :</p>
+                <ul>
+                    <li>- Ouvrir la page <a href="https://www.photopea.com/" target="_blank">www.photopea.com/</a></li>
+                    <li>- Ouvrir votre fichier (<span class="btn">Fichier</span> puis <span class="btn">Ouvrir…</span>)</li>
+                    <li>- Dans la fenêtre qui s'ouvre, vérifier que les paramètres sont corrects (Largeur = 8, Hauteur = 8, Canaux = 1, Profondeur = 8 Bits).</li>
+                    <li>- Zoomer pour voir l'image en grand (<span class="btn">alt</span> + molette).</li>
+                </ul>
+                <p>► Si votre code est correct, l'image qui s'affiche doit correspondre à ce que vous aviez prévu !!!</p>
+
+            </div>
+
+            <h3>3) Le format RAW à 3 canaux de 8 bits</h3>
+            <h4>S'informer</h4>
+            <div class="icone documents">
+                <p>Dans le format RAW à 3 canaux de 8 bits, chaque pixel est codé sur 3 octets, 1 octet pour chaque couleur de base.</p>
+            </div>
+
+            <h4>Manipuler : vérifier le code d'une image</h4>
+            <div class="icone ordinateur">
+                <p>1) Sur votre cahier, proposer le code au format RAW 3 canaux de 8 bits de l'image suivante : <img src="images/image3.png" style="vertical-align: middle;">
+                <p>2) Créer l'image :</p>
+                <ul>
+                    <li>- Ouvrir la page <a href="https://www.photopea.com/" target="_blank">www.photopea.com/</a></li>
+                    <li>- Créer un nouveau fichier de <strong>3×3 pixels</strong> (<span class="btn">Fichier</span> puis <span class="btn">Nouveau…</span> puis faire attention à bien paramétrer)</li>
+                    <li>- Zoomer (<span class="btn">alt</span> + molette) pour voir les pixels.</li>
+                    <li>- Colorier les pixels pour que votre image corresponde à l'image de la question précédente.</li>
+                    <li>- Enregistrer votre fichier au format RAW en choisissant bien le format 3 Canaux de 8 bits (<span class="btn">Fichier</span> puis <span class="btn">Exporter en tant que</span> puis <span class="btn">Plus</span> puis <span class="btn">RAW .raw</span>).</li>
+                </ul>
+                <p>3) Visualiser le code de votre image à l'aide de la page <a href="https://hexed.it/" target="_blank">hexed.it</a>.</p>
+                <p>► Le code qui s'affiche doit correspondre à celui que vous avez proposé dans la question n° 1 !!!</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>IV - Exercices</h2>
+            <h3>Exercice 1</h3>
+            <p>L'ouverture dans un éditeur de texte (comme hexed.it) du fichier d'une image de 7×7 pixels au format RAW donne le résultat suivant :</p>
+            <div style="border: 1px solid black; width:30em; margin-left: 3em; background-color: #ccc; font-family: monospace;">
+                <p>FF FF FF FF FF FF FF FF 00 00 FF 00 00 FF FF 00</p>
+                <P>00 FF 00 00 FF FF FF FF FF FF FF FF FF 00 FF FF</P>
+                <p>FF 00 FF FF FF 00 00 00 FF FF FF FF FF FF FF FF</p>
+                <P>FF</P>
+            </div>
+            <p>1) Sur combien d'octets chaque pixel est-il codé ?</p>
+            <p>2) Quelle sera l'apparence de l'image correspondante ?</p>
+
+            <h3>Exercice 2</h3>
+            <p>Proposer le codage au format RAW de l'image suivante (on précisera le nombre de canaux et de bits par canal nécessaire) :</p>
+            <figure>
+                <img src="images/7.2_exo2.png">
+            </figure>
+
+        </section>
+        <a href = "../../index.html#ancre_2">retour</a>
+    </main>
+
+    <footer>
+        <p>www.ostralo.net</p>
+    </footer>
+</body>
+
+
+<!-- Mirrored from snt2021.ostralo.net/t7_photo_numerique/7.2_fichiers_image.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 Apr 2022 13:44:48 GMT -->
+</html>

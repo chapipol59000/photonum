@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from snt2021.ostralo.net/t7_photo_numerique/page_couleurs.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 Apr 2022 13:44:46 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../commun/styles_activite_commun.css" rel="stylesheet" type="text/css">
+    <title>SNT</title>
+    <style>
+        table {
+            text-align: center;
+            vertical-align: middle;
+            border: none;
+            margin: auto;
+            background-color: #d9d9d9;
+        }
+        p {
+            text-align: center;
+        }
+        td, th {
+            width: 3em;
+            height: 3em;
+        }
+        td {
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <h1>Quelques couleurs</h1>
+        <p>Cliquer sur une couleur pour changer la couleur de fond de la page.</p>
+        <table>
+            <tr>
+                <td style="background-color: #000;"></td>
+                <td style="background-color: #300;"></td>
+                <td style="background-color: #600;"></td>
+                <td style="background-color: #900;"></td>
+                <td style="background-color: #c00;"></td>
+                <td style="background-color: #f00;"></td>
+            </tr>
+            <tr>
+                <td style="background-color: #000;"></td>
+                <td style="background-color: #330;"></td>
+                <td style="background-color: #660;"></td>
+                <td style="background-color: #990;"></td>
+                <td style="background-color: #cc0;"></td>
+                <td style="background-color: #ff0;"></td>
+            </tr>
+            <tr>
+                <td style="background-color: #000;"></td>
+                <td style="background-color: #030;"></td>
+                <td style="background-color: #060;"></td>
+                <td style="background-color: #090;"></td>
+                <td style="background-color: #0c0;"></td>
+                <td style="background-color: #0f0;"></td>
+            </tr>
+            <tr>
+                <td style="background-color: #000;"></td>
+                <td style="background-color: #033;"></td>
+                <td style="background-color: #066;"></td>
+                <td style="background-color: #099;"></td>
+                <td style="background-color: #0cc;"></td>
+                <td style="background-color: #0ff;"></td>
+            </tr>
+            <tr>
+                <td style="background-color: #000;"></td>
+                <td style="background-color: #003;"></td>
+                <td style="background-color: #006;"></td>
+                <td style="background-color: #009;"></td>
+                <td style="background-color: #00c;"></td>
+                <td style="background-color: #00f;"></td>
+            </tr>
+            <tr>
+                <td style="background-color: #000;"></td>
+                <td style="background-color: #303;"></td>
+                <td style="background-color: #606;"></td>
+                <td style="background-color: #909;"></td>
+                <td style="background-color: #c0c;"></td>
+                <td style="background-color: #f0f;"></td>
+            </tr>
+        </table>
+<p> </p>
+        <table>
+            <tr>
+                <td style="background-color: #000;"></td>
+                <td style="background-color: #333;"></td>
+                <td style="background-color: #666;"></td>
+                <td style="background-color: #999;"></td>
+                <td style="background-color: #ccc;"></td>
+                <td style="background-color: #fff;"></td>
+            </tr>
+        </table>
+
+    </main>
+
+    <script language="javascript">
+        listeBalises = document.querySelectorAll('td');
+        for (balise of listeBalises) {
+            balise.addEventListener('click', function() {
+                document.querySelector('body').style.backgroundColor = this.style.backgroundColor;
+            })
+
+
+        }
+
+    </script>
+
+</body>
+
+
+<!-- Mirrored from snt2021.ostralo.net/t7_photo_numerique/page_couleurs.htm by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 Apr 2022 13:44:46 GMT -->
+</html>
